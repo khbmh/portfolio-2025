@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 const data = [
   {
     name: 'Frontend technologies',
@@ -15,7 +13,7 @@ const data = [
       },
       {
         name: 'Next.js',
-        img: 'https://static-00.iconduck.com/assets.00/nextjs-icon-1024x1024-5et230l7.png',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV9uzErWz9EXqZDxZ5lP9aYpMz8eK6rr5X3w&s',
       },
     ],
     photo:
@@ -49,7 +47,8 @@ const data = [
       },
       {
         name: 'Github',
-        img: 'https://cdn-icons-png.flaticon.com/512/25/25231.png',
+        img: 'https://i.pinimg.com/736x/b5/1b/78/b51b78ecc9e5711274931774e433b5e6.jpg',
+        // img: 'https://cdn-icons-png.flaticon.com/512/25/25231.png',
       },
       {
         name: 'VSCode',
@@ -63,121 +62,23 @@ const data = [
 
 export default function Cards() {
   return (
-    <div style={container}>
+    <div className="flex flex-col my-[12vh] gap-[10vh] z-[20] bg-slate-950/80 px-0">
       {data.map(({ name, photo, technologies }, i) => (
-        <Card
+        <div
           key={i}
-          name={name}
-          photo={photo}
-          technologies={technologies} // Pass technologies as a prop
-          index={i}
-        />
+          className="h-[50vh] lg:[80vh] w-[90vw] mx-auto max-w-[600px] bg-slate-950 border border-white/20 flex flex-col items-center justify-center gap-12 lg:gap-16 text-center"
+        >
+          <p className="text-3xl">{name}</p>
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
+            {technologies.map(({ name, img }, j) => (
+              <div key={j} className="flex lg:flex-col justify-center items-center gap-4">
+                <img className="w-[50px]" src={img} alt={name} />
+                <p>{name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       ))}
     </div>
   );
 }
-
-function Card({ name, photo, technologies, index }) {
-  return (
-    <motion.div
-      className={`card-container-${index}`}
-      style={cardContainer}
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ amount: 1 }}
-    >
-      <div
-        className="opacity-40"
-        style={{
-          ...splash,
-          background: '#121',
-          backgroundSize: 'contain',
-        }}
-      />
-      <motion.div
-        style={card}
-        variants={cardVariants}
-        className="card w-[70vw] lg:w-[25vw] -pt-[40px]  h-[50vh] lg:h-[70vh] bg-gradient-to-t from-slate-700 to-pink-900"
-      >
-        {/* Add the img element here */}
-        <h1 className="font-semibold text-lg lg:text-2xl my-5" style={{ color: '#fff' }}>
-          {name}
-        </h1>
-
-        {/* Map over technologies and render images */}
-        {technologies.map((img, idx) => (
-          <div key={idx} className="flex gap-4 my-3 justify-center items-center">
-            <img
-            className='w-[50px] lg:w-[100px] h-[50px] lg:h-[100px]'
-              src={img.img}
-              alt={img.name} // Provide a meaningful and unique alt text
-              style={{
-                objectFit: 'contain',
-              }}
-            />
-            <p className="opacity-60 text-sm lg:text-base">{img.name}</p>
-          </div>
-        ))}
-      </motion.div>
-    </motion.div>
-  );
-}
-
-const cardVariants = {
-  offscreen: {
-    y: 300,
-  },
-  onscreen: {
-    y: 50,
-    rotate: -10,
-    transition: {
-      type: 'spring',
-      bounce: 0.4,
-      duration: 0.8,
-    },
-  },
-};
-
-/**
- * ==============   Styles   ================
- */
-
-const container = {
-  margin: '100px auto',
-  maxWidth: 500,
-  paddingBottom: 100,
-  width: '100%',
-};
-
-const cardContainer = {
-  overflow: 'hidden',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  position: 'relative',
-  paddingTop: 20,
-  marginBottom: 20,
-};
-
-const splash = {
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  clipPath: `path("M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z")`,
-};
-
-const card = {
-  fontSize: 16,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  borderRadius: 20,
-  boxShadow:
-    '0 0 1px hsl(0deg 0% 0% / 0.075), 0 0 2px hsl(0deg 0% 0% / 0.075), 0 0 4px hsl(0deg 0% 0% / 0.075), 0 0 8px hsl(0deg 0% 0% / 0.075), 0 0 16px hsl(0deg 0% 0% / 0.075)',
-  transformOrigin: '10% 60%',
-  padding: '20px',
-  color: '#fff',
-};
