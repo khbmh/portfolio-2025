@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-**Live Link:** [Click Here](https://mahi-6-feb-25.netlify.app/)
+**Live Link:** [Click Here](https://kbmh-mahi.netlify.app/)
 
 Welcome to my personal portfolio website! I am **Khaled Bin Monowar Hossian**, a junior MERN stack developer, passionate about frontend development and building sleek, responsive web applications. This portfolio showcases my skills, projects, and education journey.
 
@@ -32,9 +32,10 @@ Welcome to my personal portfolio website! I am **Khaled Bin Monowar Hossian**, a
 - **motion**: A library for scroll-based and interactive animations.
 - **Vite**: A modern build tool and development server optimized for React projects.
 
-
 ### Tools:
 - **Git**: A version control system for tracking changes in the project.
 - **GitHub**: A platform for hosting and sharing Git repositories.
 - **VSCode**: A popular code editor used for writing and editing the project code.
 - **ESLint**: A tool for identifying and fixing problems in JavaScript code.
+
+---
