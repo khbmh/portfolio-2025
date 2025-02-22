@@ -1,5 +1,10 @@
+// import { useState } from 'react';
+// import Details from './Details';
+// import { param } from 'motion/react-client';
 
-function Projects() {
+import Details from '../projects/Details';
+
+function Works() {
   // const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const projects = [
     {
@@ -139,6 +144,87 @@ function Projects() {
                   </button>
                   <dialog
                     id={`my_modal_${p.id}`}
+                    className="modal min-h-screen flex flex-col justify-center gap-2 items-center py-2 bg-slate-950 modal-bottom sm:modal-middle"
+                  >
+                    <div
+                      className={`container relative text-white mx-auto overflow-x-hidden max-h-[80vh] lg:max-w-[1200px] lg:w-[80vw]`}
+                    >
+                      <div className="flex flex-col items-center justify-center py-1">
+                        <div className="flex flex-col lg:flex-row gap-4 px-4">
+                          <img
+                            className="max-w-[500px] w-[95vw] mx-auto rounded-md"
+                            src={p?.image}
+                            alt=""
+                          />
+                          <div className='lg:space-y-5'>
+                            <h2 className="text-xl font-semibold">{p.name}</h2>
+                            <h3 className="mahi opacity-70 leading-tight mb-4">
+                              {p.details.description}
+                            </h3>
+                            <div className="flex flex-wrap gap-2">
+                              {p.details.techStack.map((skill, index) => (
+                                <p
+                                  key={index}
+                                  className="text-sm bg-black px-2 py-1 rounded-full border border-white/60"
+                                >
+                                  {skill}
+                                </p>
+                              ))}
+                            </div>
+                            <div className="flex gap-4 my-4 *:px-4 *:py-1 *:bg-slate-800">
+                              <a
+                                href={p.details.liveProjectLink}
+                                target="_blank"
+                              >
+                                Live Link
+                              </a>
+                              <a href={p.details.githubRepo} target="_blank">
+                                Github
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex px-3 flex-col lg:flex-row gap-4 lg:mt-4 lg:w-full lg:justify-around">
+                          <div>
+                            <h3 className="text-2xl">Challenges Faced</h3>
+                            {p.details.challengesFaced.map(
+                              (challenge, index) => (
+                                <p
+                                  key={index}
+                                  className="mahi text-xs lg:text-base"
+                                >
+                                  ~ {challenge}
+                                </p>
+                              ),
+                            )}
+                          </div>
+                          <div>
+                            <h3 className="text-2xl">Future Improvements</h3>
+                            {p.details.futureImprovements.map(
+                              (challenge, index) => (
+                                <p
+                                  key={index}
+                                  className="mahi text-xs lg:text-base"
+                                >
+                                  ~ {challenge}
+                                </p>
+                              ),
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="modal-action h-[10vh] lg:pt-10">
+                      <form method="dialog">
+                        <button className="px-6 mahi cursor-pointer py-2 rounded-full bg-gradient-to-r from-slate-700 to-pink-900">
+                          Close
+                        </button>
+                      </form>
+                    </div>
+                  </dialog>
+
+                  {/* <dialog
+                    id={`my_modal_${p.id}`}
                     className="modal min-h-screen flex flex-col justify-center gap-2 items-center py-8 bg-slate-950 modal-bottom sm:modal-middle"
                   >
                     <div
@@ -209,12 +295,12 @@ function Projects() {
                     <div className="modal-action h-[10vh]">
                       <form method="dialog">
                         {/* if there is a button in form, it will close the modal */}
-                        <button className="px-6 mahi cursor-pointer py-2 rounded-full bg-gradient-to-r from-slate-700 to-pink-900">
+                  {/* <button className="px-6 mahi cursor-pointer py-2 rounded-full bg-gradient-to-r from-slate-700 to-pink-900">
                           Close
                         </button>
                       </form>
                     </div>
-                  </dialog>
+                  </dialog> */}
                 </div>
               </div>
             </div>
@@ -225,4 +311,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Works;

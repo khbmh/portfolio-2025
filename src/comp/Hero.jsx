@@ -30,7 +30,7 @@ function Hero() {
         <p className="2xl:text-5xl text-3xl px-8 font-semibold text-center tracking-wide leading-[150%]">
           Full Stack Developer
         </p>
-        <div className="flex flex-row-reverse items-center my-4 justify-center gap-10 z-[1000]">
+        <div className="flex flex-row-reverse items-center my-4 justify-center gap-10 z-[10]">
           <a
             className="px-6 mahi cursor-pointer py-2 rounded-full bg-gradient-to-r from-slate-700 to-pink-900"
             href="https://github.com/khbmh"

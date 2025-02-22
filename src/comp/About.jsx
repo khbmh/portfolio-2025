@@ -42,7 +42,7 @@ function About() {
               (index / letters.length) * 0.8,
               ((index + 1) / letters.length) * 1.2,
             ],
-            [0, 1],
+            [0.1, 1],
           );
           return (
             <motion.span key={index} style={{ opacity }}>

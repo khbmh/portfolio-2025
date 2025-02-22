@@ -4,10 +4,10 @@ export const Links = () => {
   return (
     <section className="grid place-content-center gap-2 px-8 lg:py-12 h-[92vh] lg:h-fit pt-8 text-center lg:text-left text-white/80">
       <FlipLink href="mailto:kbmh.mahi@gmail.com">EMAIL</FlipLink>
-      <FlipLink href="tel:+8801705047897">PHONE</FlipLink>
+      <FlipLink href="tel:+8801575040200">PHONE</FlipLink>
       <FlipLink href="https://www.github.com/Khbmh">Github</FlipLink>
       <FlipLink href="https://www.linkedin.com/in/Khbmh">Linkedin</FlipLink>
-      <FlipLink href="https://wa.me/+8801705047897">WHATSAPP</FlipLink>
+      <FlipLink href="https://wa.me/+8801575040200">WHATSAPP</FlipLink>
     </section>
   );
 };

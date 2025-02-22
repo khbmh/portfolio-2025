@@ -57,7 +57,7 @@ const Details = ({ data, isDetailsOpen, setIsDetailsOpen }) => {
               ))}
             </div>
             <div>
-              <h3 className="text-2xl">Challenges Faced</h3>
+              <h3 className="text-2xl">Future Improvements</h3>
               {data.details.futureImprovements.map((challenge, index) => (
                 <p key={index} className="mahi bg-black">
                   => {challenge}
