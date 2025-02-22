@@ -1,8 +1,4 @@
-// import { useState } from 'react';
-// import Details from './Details';
-// import { param } from 'motion/react-client';
 
-import Details from '../projects/Details';
 
 function Works() {
   // const [isDetailsOpen, setIsDetailsOpen] = useState(false);
@@ -131,7 +127,7 @@ function Works() {
                 {/* <p className="text-sm text-gray-300">{p.image}</p> */}
                 <img className="w-full rounded" src={p.image} alt={p.name} />
                 <h2 className="text-xl font-semibold my-4">{p.name}</h2>
-                <h3 className="mahi opacity-70">{p.details.description}</h3>
+                <h3 className="mahi opacity-70">{p.details.description.substring(0,163)}...</h3>
                 <div className="mt-4 flex justify-center">
                   {/* Open the modal using document.getElementById('ID').showModal() method */}
                   <button
