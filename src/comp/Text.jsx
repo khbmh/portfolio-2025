@@ -42,7 +42,7 @@ const Text = () => {
   return (
     <div id='about' className="flex flex-col">
       <div className="text flex justify-center items-center pt-[14vh] pb-[5vh] px-5 mx-auto text-white lg:w-[70vw] text-center">
-        <p className="text-3xl md:text-5xl tracking-wide">
+        <p className="text-2xl md:text-4xl lg:text-5xl tracking-wide">
           {splitText}
         </p>
       </div>
