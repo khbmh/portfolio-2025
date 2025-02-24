@@ -33,7 +33,7 @@ function Hero() {
         <div className="flex flex-row-reverse items-center my-4 justify-center gap-10 z-[10]">
           <a
             className="px-6 mahi cursor-pointer py-2 rounded-full bg-gradient-to-r from-slate-700 to-pink-900"
-            href="https://github.com/khbmh"
+            href="https://drive.google.com/file/d/1R6dFA3FiC_zfJdM8h4rekhzvVNHezjbm/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
           >

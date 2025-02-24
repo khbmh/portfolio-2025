@@ -32,7 +32,7 @@ const data = [
       },
       {
         name: 'MongoDB',
-        img: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/mongodb-icon.png',
+        img: 'https://cdn.iconscout.com/icon/free/png-256/free-mongodb-logo-icon-download-in-svg-png-gif-file-formats--wordmark-programming-langugae-freebies-pack-logos-icons-1175140.png',
       },
     ],
     photo:
@@ -71,7 +71,10 @@ export default function Cards() {
           <p className="text-3xl">{name}</p>
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
             {technologies.map(({ name, img }, j) => (
-              <div key={j} className="flex lg:flex-col justify-center items-center gap-4">
+              <div
+                key={j}
+                className="flex lg:flex-col justify-center items-center gap-4"
+              >
                 <img className="w-[50px]" src={img} alt={name} />
                 <p>{name}</p>
               </div>
