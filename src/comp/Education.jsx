@@ -43,7 +43,7 @@ function Education() {
 
         <motion.img
           className="lg:max-w-[600px] lg:h-[60vh] w-full h-[40vh] bg-cover bg-center rounded-lg object-cover overflow-hidden"
-          src="https://www.edufever.com/wp-content/uploads/2021/10/Chittagong-University.webp"
+          src="https://i.ibb.co.com/PsS18fFs/maxresdefault.jpg"
           initial={{ scale: 0.8, opacity: 0, blur: '100px' }}
           whileInView={{ scale: 1, opacity: 1, blur: '0px' }}
           onViewportLeave={{ scale: 0.8, opacity: 0 }}
