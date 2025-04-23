@@ -11,10 +11,10 @@ const data = [
         name: 'ReactJs',
         img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png',
       },
-      {
-        name: 'Next.js',
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV9uzErWz9EXqZDxZ5lP9aYpMz8eK6rr5X3w&s',
-      },
+      // {
+      //   name: 'Next.js',
+      //   img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV9uzErWz9EXqZDxZ5lP9aYpMz8eK6rr5X3w&s',
+      // },
     ],
     photo:
       'https://i.pinimg.com/originals/c5/33/a5/c533a50f8877f9cfb4c31e4cd164b0a0.gif',
