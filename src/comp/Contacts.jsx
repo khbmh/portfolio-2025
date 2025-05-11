@@ -10,9 +10,14 @@ function Contacts() {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_0u7pgam', 'template_iz0h32h', form.current, {
-        publicKey: 'ivoV16tK_728ICRqT',
-      })
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        },
+      )
       .then(
         () => {
           toast.success('Message sent successfully!');
