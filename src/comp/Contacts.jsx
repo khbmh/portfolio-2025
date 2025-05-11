@@ -1,18 +1,35 @@
 import toast, { Toaster } from 'react-hot-toast';
 import { Links } from './Links';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 function Contacts() {
+  const form = useRef();
+
   const handleForm = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    e.target.reset();
-    toast.success('Thanks for messaging!');
+
+    emailjs
+      .sendForm('service_0u7pgam', 'template_iz0h32h', form.current, {
+        publicKey: 'ivoV16tK_728ICRqT',
+      })
+      .then(
+        () => {
+          toast.success('Message sent successfully!');
+          e.target.reset();
+        },
+        (error) => {
+          toast.error('Failed to send message. Please try again.');
+          console.log('FAILED...', error.text);
+        },
+      );
   };
+
   return (
     <footer id="contacts" className="pt-[13vh] pb-[9vh] bg-gray-900 px-4">
       <div className="text-white max-w-[800px] mx-auto">
         <p className="text-4xl  font-bold text-center mb-4">
-          Let’s Connect and Create Magic Together!
+          Let's Connect and Create Magic Together!
         </p>
         <h1 className="text-lg text-center mb-8 opacity-80">
           If you have any questions, ideas, or just want to chat about exciting
@@ -23,6 +40,7 @@ function Contacts() {
       <div className="h-fit container mx-auto flex-col lg:flex-row-reverse flex justify-around items-center">
         <div className="">
           <form
+            ref={form}
             onSubmit={handleForm}
             className="text-white w-full max-w-md lg:min-w-[400px] rounded"
           >
@@ -33,7 +51,7 @@ function Contacts() {
               <input
                 type="text"
                 id="name"
-                name="name"
+                name="user_name"
                 className="w-full mahi text-white px-3 py-2 border border-white/40 rounded focus:outline-none focus:shadow-outline"
                 placeholder="Your Name"
                 required
@@ -46,7 +64,7 @@ function Contacts() {
               <input
                 type="email"
                 id="email"
-                name="email"
+                name="user_email"
                 className="w-full mahi text-white px-3 py-2 border border-white/40 rounded focus:outline-none focus:shadow-outline"
                 placeholder="Your Email"
                 required
@@ -68,7 +86,6 @@ function Contacts() {
             <div className="flex items-center justify-center">
               <button
                 type="submit"
-                // className="px-6 mahi font-semibold cursor-pointer py-2 rounded-full bg-white text-green-900"
                 className="px-6 mahi text-white cursor-pointer py-2 rounded-full bg-gradient-to-r from-slate-700 to-pink-900"
               >
                 Send Message
@@ -84,4 +101,3 @@ function Contacts() {
 }
 
 export default Contacts;
-2;
