@@ -1,5 +1,3 @@
-
-
 function Works() {
   // const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const projects = [
@@ -123,11 +121,15 @@ function Works() {
         <div className="grid gap-[23vh] bg-slate-950/80 lg:order-first justify-center my-[20vh] items-center z-[33]">
           {projects.map((p) => (
             <div key={p.id} className="grid place-content-center">
-              <div className="transition-all flex flex-col items-center justify-center bg-slate-900 duration-300 w-[90vw] max-w-[500px] h-auto lg:h-[70vh] align-bottom object-cover rounded-md p-4 border border-white/50">
+              <div className="transition-all flex flex-col items-center justify-between bg-slate-900 duration-300 w-[90vw] max-w-[500px] h-auto lg:h-[70vh] max-h-[470px] align-bottom object-cover rounded-md p-4 border border-white/50">
                 {/* <p className="text-sm text-gray-300">{p.image}</p> */}
                 <img className="w-full rounded" src={p.image} alt={p.name} />
-                <h2 className="text-xl font-semibold my-4">{p.name}</h2>
-                <h3 className="mahi opacity-70">{p.details.description.substring(0,163)}...</h3>
+                <div>
+                  <h2 className="text-xl font-semibold my-4">{p.name}</h2>
+                  <h3 className="mahi opacity-70">
+                    {p.details.description.substring(0, 163)}...
+                  </h3>
+                </div>
                 <div className="mt-4 flex justify-center">
                   {/* Open the modal using document.getElementById('ID').showModal() method */}
                   <button
@@ -152,7 +154,7 @@ function Works() {
                             src={p?.image}
                             alt=""
                           />
-                          <div className='lg:space-y-5'>
+                          <div className="lg:space-y-5">
                             <h2 className="text-xl font-semibold">{p.name}</h2>
                             <h3 className="mahi opacity-70 leading-tight mb-4">
                               {p.details.description}

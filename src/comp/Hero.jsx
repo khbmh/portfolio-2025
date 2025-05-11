@@ -24,7 +24,7 @@ function Hero() {
         <h1 className="2xl:text-3xl text-2xl font-semibold text-left tracking-tight leading-[120%]">
           👋🏻 Hi, I am
         </h1>
-        <p className="2xl:text-4xl text-3xl px-8 font-semibold bg-gradient-to-r to-slate-700 from-pink-900 text-transparent bg-clip-text text-center tracking-tight leading-[120%]">
+        <p className="2xl:text-4xl text-3xl px-8 font-semibold bg-gradient-to-r from-slate-300 to-pink-600 text-transparent bg-clip-text text-center tracking-tight leading-[120%]">
           Khaled Bin Monowar Hossian
         </p>
         <p className="2xl:text-5xl text-3xl px-8 font-semibold text-center tracking-wide leading-[150%]">

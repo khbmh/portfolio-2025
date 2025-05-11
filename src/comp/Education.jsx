@@ -32,7 +32,7 @@ function Education() {
           <a
             href="https://cu.ac.bd/mgt/"
             target="_blank"
-            className="2xl:text-4xl text-3xl font-semibold bg-gradient-to-r from-slate-700 to-pink-900 text-transparent bg-clip-text text-center tracking-wide leading-[120%]"
+            className="2xl:text-4xl text-3xl font-semibold bg-gradient-to-r from-slate-300 to-pink-600 text-transparent bg-clip-text text-center tracking-wide leading-[120%]"
           >
             BBA in Management
           </a>
